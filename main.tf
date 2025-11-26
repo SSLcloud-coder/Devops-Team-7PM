@@ -22,6 +22,13 @@ resource "azurerm_subnet-3" "subnet-3" {
   resource_group_name  = azurerm_resource_group.rg.name-3
   virtual_network_name = azurerm_virtual_network.vnet.name-3
   address_prefixes     = ["10.99.66.22/24"]
+
+}
+resource "azurerm_subnet_2" "subnet-2" {
+  name                 = "${var.prefix}-subnet-2"
+  resource_group_name  = azurerm_resource_group.rg.name-2
+  virtual_network_name = azurerm_virtual_network.vnet.name-2
+  address_prefixes     = ["10.34.56.55/24"]
 }
 
 resource "azurerm_network_interface" "nic" {
