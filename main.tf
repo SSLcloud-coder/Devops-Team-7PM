@@ -10,6 +10,7 @@ resource "azurerm_virtual_network" "vnet" {
   resource_group_name = azurerm_resource_group.rg.name
 }
 
+#JIRA 102-NEW-VNET-ADDED-WEST-US
 resource "azurerm_virtual_network" "vnet-west-us" {
   name                = "${var.prefix}-vnet-west-us"
   address_space       = ["10.40.84.99/32"]
