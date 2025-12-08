@@ -47,6 +47,14 @@ resource "azurerm_virtual_network" "vnet--North--us1" {
   location           = azurerm_resource_group.rg.locationvnet--North--us1
   resource_group_name = azurerm_resource_group.rg.namevnet--North--us1
 }
+
+#JIRA 302-NEW-VNET-ADDED-South-West-US-2
+resource "azurerm_virtual_network" "vnet---South-West-US-2" {
+  name                = "${var.prefix}vnet---South-West-US-2"
+  address_space       = ["10.16.37.26/32"]
+  location           = azurerm_resource_group.rg.location--vnet---South-West-US-2
+  resource_group_name = azurerm_resource_group.rg.name--vnet---South-West-US-2
+}
 #changes done by admin
 resource "azurerm_subnet" "subnet" {
   name                 = "${var.prefix}-subnet"
